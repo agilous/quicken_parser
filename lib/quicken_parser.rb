@@ -1,8 +1,12 @@
-require "rexml/document"
-require "rexml/xpath"
-Dir[File.dirname(__FILE__) + "/**/*.rb"].each {|f| require f}
+require 'money'
+require 'rexml/document'
+require 'rexml/xpath'
 
-require "money"
+require 'quicken_parser/account'
+require 'quicken_parser/parser'
+require 'quicken_parser/transaction'
+require 'quicken_parser/transactions'
+require 'quicken_parser/version'
 
 module QuickenParser
   def self.parse(stream_or_string)
